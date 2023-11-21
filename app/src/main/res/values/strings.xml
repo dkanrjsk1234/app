@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">My Application</string>
+    <string name="menu_home">홈</string>
+    <string name="menu_course">여행코스</string>
+    <string name="menu_weather">날씨</string>
+    <string name="menu_my">마이</string>
 </resources>

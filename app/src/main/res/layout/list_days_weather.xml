@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="item"
+            type="com.example.myapplication.country.SubCountry" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:paddingTop="2dp"
+        android:paddingBottom="2dp">
+
+        <TextView
+            android:id="@+id/tv_day"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="오늘"
+            android:fontFamily="@font/pretendard_medium"
+            android:textSize="13dp"
+            android:textColor="@color/black"
+            tools:ignore="MissingConstraints"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+        <ImageView
+            android:id="@+id/iv_cloud"
+            android:layout_width="35dp"
+            android:layout_height="24dp"
+            android:src="@drawable/cloud_ic"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tv_day"
+            app:layout_constraintBottom_toBottomOf="@id/tv_day"
+            android:layout_marginStart="70dp"/>
+
+        <TextView
+            android:id="@+id/tv_time_min_temperature"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="20º"
+            android:fontFamily="@font/pretendard_medium"
+            android:textSize="10dp"
+            android:textColor="@color/gray_150"
+            app:layout_constraintTop_toTopOf="@id/tv_day"
+            app:layout_constraintBottom_toBottomOf="@id/tv_day"
+            app:layout_constraintStart_toEndOf="@id/iv_cloud"
+            android:layout_marginStart="110dp"/>
+
+        <TextView
+            android:id="@+id/tv_slash"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="/"
+            android:fontFamily="@font/pretendard_medium"
+            android:textSize="10dp"
+            android:textColor="@color/black"
+            app:layout_constraintTop_toTopOf="@id/tv_day"
+            app:layout_constraintBottom_toBottomOf="@id/tv_day"
+            app:layout_constraintStart_toEndOf="@id/tv_time_min_temperature"
+            android:layout_marginStart="7dp"/>
+
+        <TextView
+            android:id="@+id/tv_time_max_temperature"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="28º"
+            android:fontFamily="@font/pretendard_medium"
+            android:textSize="10dp"
+            android:textColor="@color/black"
+            app:layout_constraintTop_toTopOf="@id/tv_day"
+            app:layout_constraintBottom_toBottomOf="@id/tv_day"
+            app:layout_constraintStart_toEndOf="@id/tv_slash"
+            android:layout_marginStart="7dp"/>
+
+        <View
+            android:id="@+id/mypage_profile_under_view"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/gray_50"
+            app:layout_constraintTop_toBottomOf="@id/tv_day" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

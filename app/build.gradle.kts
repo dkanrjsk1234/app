@@ -36,12 +36,15 @@ android {
     }
 
     buildFeatures {
-        dataBinding = true
+        dataBinding {
+            enable = true
+        }
     }
 }
 
 dependencies {
 
+    implementation("com.google.android.material:material:1.1.0")
     implementation("androidx.core:core-ktx:1.9.0")
     implementation("androidx.appcompat:appcompat:1.6.1")
     implementation("com.google.android.material:material:1.8.0")
